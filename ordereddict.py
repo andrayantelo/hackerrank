@@ -18,6 +18,27 @@
 #Print the item_name and net_price in order of its first occurrence.
 
 from collections import OrderedDict
+import re
 
 n = input()
+groceries = OrderedDict()
 
+f = open('input.txt', 'r')
+
+for line in f:
+	#setdefault dict method to set default value to 0 so that we can do += price TODO TODO
+    item = line.split()
+    price = int(item.pop())
+    groceries[" ".join(item)] = price
+    #print(list)
+    #print(price)
+print(groceries)   
+    #price = int(line.split().pop())
+    #print(line)
+    #print(price)
+	#groceries[s[0]] = int(s[1])
+
+#print groceries
+
+# you'll have something like this: OrderedDict([('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', 5)])
+# OrderedDict([('banana fries', 12), ('potato chips', 30), ('apple juice', 10), ('candy', 5)])
