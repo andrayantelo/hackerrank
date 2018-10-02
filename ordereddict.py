@@ -26,8 +26,18 @@ f = open('input.txt', 'r')
 
 for line in f:
 	item = line.rsplit(None, 1)
-	if item[0] in groceries
-	groceries[item[0]] = item[1]
+	unit = item[0]
+	price = int(item[1])
+	
+	if unit in groceries:
+	  groceries[unit] += price 
+	else:
+	  groceries[unit] = price
+	 
+for key in groceries:
+	print(key, end=" ")
+	print(groceries[key])		
+	  
 
 #def parse_input(string):
 #	"""returns tuple of item name and data"""
