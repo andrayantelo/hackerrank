@@ -18,7 +18,6 @@
 #Print the item_name and net_price in order of its first occurrence.
 
 from collections import OrderedDict
-import re
 
 n = input()
 groceries = OrderedDict()
@@ -26,19 +25,28 @@ groceries = OrderedDict()
 f = open('input.txt', 'r')
 
 for line in f:
-	#setdefault dict method to set default value to 0 so that we can do += price TODO TODO
-    item = line.split()
-    price = int(item.pop())
-    groceries[" ".join(item)] = price
-    #print(list)
-    #print(price)
-print(groceries)   
-    #price = int(line.split().pop())
-    #print(line)
-    #print(price)
-	#groceries[s[0]] = int(s[1])
+	item = line.rsplit(None, 1)
+	if item[0] in groceries
+	groceries[item[0]] = item[1]
 
-#print groceries
-
-# you'll have something like this: OrderedDict([('a', 1), ('b', 2), ('c', 3), ('d', 4), ('e', 5)])
-# OrderedDict([('banana fries', 12), ('potato chips', 30), ('apple juice', 10), ('candy', 5)])
+#def parse_input(string):
+#	"""returns tuple of item name and data"""
+#	item = string.split()
+#	price = int(item.pop())
+#	item = " ".join(item)
+#	return (item, price)
+	
+#def make_odict(text_file):
+#	f = open(text_file, 'r')
+#	groceries = OrderedDict()
+#	for line in f:
+#	    item, price = parse_input(line)
+#	    groceries.setdefault(item, 0)
+#	    groceries[item] += price
+    
+#def print_groceries(groc_dict):	
+#	for key in groceries:
+#		print(key, end=" ")
+#		print(groceries[key])
+   
+   
