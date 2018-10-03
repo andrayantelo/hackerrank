@@ -33,14 +33,16 @@ f = open('input.txt', 'r')
 words = OrderedDict()
 
 for word in f:
-	word = word.rstrip()
+	#word = word.rstrip()
 	if word in words:
-		words[word] += 1
+		words[word.rstrip()] += 1
 	else:
-		words[word] = 1
+		words[word.rstrip()] = 1
 		
 print(len(words))
 for key in words:
 	print(words[key], end=" ")
+	
+	
 	
 
