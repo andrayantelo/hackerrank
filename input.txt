@@ -1,13 +1,6 @@
-aaaa
-brth
-aaaa
-brth
-yui
-nom
-woorkl
-anwlel
-aaaa
-jdmdl
-jdml
-jdmdl
-brth
+append 1
+append 2
+append 3
+appendleft 4
+pop
+popleft
