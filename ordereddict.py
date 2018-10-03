@@ -33,6 +33,7 @@ for line in f:
 	  groceries[unit] += price 
 	else:
 	  groceries[unit] = price
+	
 	 
 for key in groceries:
 	print(key, end=" ")
