@@ -26,5 +26,20 @@ if __name__ == '__main__':
     sizes = input().split()
     n, m = sizes[0], sizes[1]
     
-    print(n)
-    print(m)
+    line = map(int, input().split())
+    
+    a, b = set(map(int, input().split())), set(map(int, input().split()))
+    
+    #happiness = 0
+    
+    #for i in line:
+    #    if i in a:
+    #        happiness += 1
+    #    elif i in b:
+    #        happiness -= 1
+    #print(happiness)
+    
+    
+    #Better solution found online:
+    happiness = sum([(i in a) - (i in b) for i in line])
+    print(happiness)
